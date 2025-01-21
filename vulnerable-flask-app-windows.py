@@ -9,6 +9,9 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER']="C:\\upload"
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1000 * 1000
 
+def alias_test():
+    return 'test'
+
 @app.route("/")
 def main_page():
     return "REST API"
