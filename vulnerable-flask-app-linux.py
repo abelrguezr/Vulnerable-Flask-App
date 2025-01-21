@@ -3,6 +3,7 @@ import subprocess
 from werkzeug.datastructures import Headers
 from werkzeug.utils import secure_filename
 import sqlite3
+from .vulnerable-flask-app-windows import alias_test as foo
 
 
 app = Flask(__name__)
@@ -11,7 +12,9 @@ app.config['MAX_CONTENT_LENGTH'] = 16 * 1000 * 1000
 
 @app.route("/")
 def main_page():
+    foo()
     return "REST API"
+    
 
 @app.route("/user/<string:name>")
 def search_user(name):
