@@ -3,7 +3,7 @@ import subprocess
 from werkzeug.datastructures import Headers
 from werkzeug.utils import secure_filename
 import sqlite3
-from .vulnerable-flask-app-windows import alias_test as foo
+from .vulnerable_flask_app_windows import alias_test as foo
 
 
 app = Flask(__name__)
